@@ -1,0 +1,27 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: "Helvetic Regular";
+    src: url("./assets/fonts/HelveticaNeueRoman.otf");
+}
+@font-face{
+    font-family: "Helvetic Medium";
+    src: url("./assets/fonts/HelveticaNeueMedium.otf");
+}
+@font-face{
+    font-family: "Helvetic Light";
+    src: url("./assets/fonts/HelveticaNeueLight.otf");
+}
+@font-face{
+    font-family: "Helvetic Bold";
+    src: url("./assets/fonts/HelveticaNeueHeavy.otf");
+}
