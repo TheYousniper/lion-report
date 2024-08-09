@@ -14,10 +14,7 @@ const Navbar = () => {
     { name: "Inicio", path: "/" },
     { name: "Colabora", path: "/colabora" },
     { name: "Reportes", path: "/reportes" },
-    { name: "Ideas", path: "/ideas" },
     { name: "Contáctanos", path: "/contactanos" },
-    { name: "Encuesta", path: "/encuesta" },
-    { name: "Informes", path: "/informes" },
   ];
 
   return (
