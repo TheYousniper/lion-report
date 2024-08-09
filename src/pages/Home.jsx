@@ -47,7 +47,7 @@ const Home = () => {
   return (
     <>
       <div className="w-full flex justify-center items-start">
-        <div className="w-[90%] h-[200px] mt-5 flex justify-center items-center rounded-[32px] bg-lion-blue">
+        <div className="w-[70%] h-[200px] mt-5 flex justify-center items-center rounded-[32px] bg-lion-blue">
           <h1 className="font-helvetic-bold text-8xl text-lion-yellow">
             ¿QUÉ SOMOS?
           </h1>
