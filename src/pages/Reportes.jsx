@@ -87,7 +87,7 @@ const Reportes = () => {
             <h1 className="font-helvetic-bold text-5xl text-center uppercase text-lion-yellow">
               Evidencia
             </h1>
-            <p className="text-lion-yellow font-helvetic-regular text-4xl">
+            <p className="text-lion-yellow font-helvetic-regular text-4xl mt-5">
               ​​Una muestra de como es que viven estas personas en la región de
               Puno.
             </p>
