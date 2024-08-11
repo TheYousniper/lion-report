@@ -9,11 +9,11 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full h-[250px] bg-lion-yellow">
+    <footer className="lg:w-full lg:h-[250px] h-full bg-lion-yellow">
       <div className="w-full h-full flex flex-col justify-around items-center p-5">
-        <Link onClick={scrollToTop} to='/' className="cursor-pointer"><img src={logo} alt="Logo" className="w-[100px]" /></Link>
-        <h2 className="text-4xl font-helvetic-medium">Reporte a los Leones - Proyecto Humanidades</h2>
-        <p className="text-3xl font-helvetic-bold">COPYRIGHT © 2024</p>
+        <Link onClick={scrollToTop} to='/' className="cursor-pointer"><img src={logo} alt="Logo" className="lg:w-[100px] w-[70px]" /></Link>
+        <h2 className="lg:text-4xl text-base font-helvetic-medium text-center mt-2">Reporte a los Leones - Proyecto Humanidades</h2>
+        <p className="lg:text-3xl text-sm font-helvetic-bold mt-2">COPYRIGHT © 2024</p>
       </div>
     </footer>
   );

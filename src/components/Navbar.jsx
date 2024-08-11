@@ -4,41 +4,73 @@ import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const location = useLocation();
-  const [activeLink, setActiveLink] = useState(location.pathname);
-
-  useEffect(() => {
-    setActiveLink(location.pathname);
-  }, [location.pathname]);
+  const [activeLink, setActiveLink] = useState("/");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
     { name: "Inicio", path: "/" },
     { name: "Colabora", path: "/colabora" },
     { name: "Reportes", path: "/reportes" },
-    { name: "Contáctanos", path: "/contactanos" },
+    { name: "Contactanos", path: "/contactanos" },
   ];
 
+  useEffect(() => {
+    setActiveLink(location.pathname);
+  }, [location.pathname]);
+
+  const handleMenuItemClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
-    <nav className="flex justify-center items-center w-full p-4">
-      <div className="w-[20%] flex justify-center items-center p-5">
-        <Link to="/" className="cursor-pointer">
-          <img src={logo} alt="Logo" className="w-[150px]" />
-        </Link>
-      </div>
-      <div className="w-[50%] h-[50px] flex justify-start">
-        <ul className="w-full h-full flex justify-around uppercase text-sm items-center gap-5 font-helvetic-medium text-[#00338D]">
-          {menuItems.map((item) => (
-            <li
-              key={item.path}
-              className={`w-full h-[30px] flex justify-center items-center rounded-xl hover:text-[#EBB700] hover:bg-[#00338D] transition duration-300 ease-in-out ${
-                activeLink === item.path ? "text-[#EBB700] bg-[#00338D]" : ""
-              }`}
+    <nav className="relative flex justify-between items-center text-black py-6 px-8 md:px-32 bg-white drop-shadow-md z-50">
+      <a href="/">
+        <img
+          src={logo}
+          alt="logo"
+          className="w-40 hover:scale-105 transition-all"
+        />
+      </a>
+      <ul className="hidden xl:flex items-center gap-12 font-helvetic-medium text-lion-blue text-xl">
+        {menuItems.map((item) => (
+          <li
+            key={item.path}
+            className={`p-3 hover:bg-lion-blue hover:text-lion-yellow rounded-md transition-all cursor-pointer ${
+              activeLink === item.path ? "bg-lion-yellow" : ""
+            }`}
+          >
+            <Link
+              to={item.path}
+              className={`${activeLink === item.path ? "font-bold" : ""}`}
             >
-              <Link to={item.path} onClick={() => setActiveLink(item.path)}>
-                {item.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
+              {item.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <i
+        className="bx bx-menu xl:hidden block text-5xl cursor-pointer text-lion-yellow"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      ></i>
+
+      <div
+        className={`absolute xl:hidden p-10 rounded-xl left-1/2 w-[90%] bg-black/95 text-lion-yellow flex flex-col items-center gap-6 font-helvetic-medium text-lg transform transition-transform backdrop-blur-sm ${
+          isMenuOpen ? "translate-y-1/2 opacity-100" : "-translate-y-full opacity-0"
+        } -translate-x-1/2`}
+        style={{ transition: "transform 0.3s ease, opacity 0.3s ease", zIndex: 50, top: "0" }}
+      >
+        {menuItems.map((item) => (
+          <Link
+            to={item.path}
+            key={item.path}
+            className={`p-3 hover:bg-lion-blue hover:text-lion-yellow rounded-md transition-all cursor-pointer ${
+              activeLink === item.path ? "bg-lion-blue" : ""
+            }`}
+            onClick={handleMenuItemClick}
+          >
+            {item.name}
+          </Link>
+        ))}
       </div>
     </nav>
   );

@@ -23,7 +23,7 @@ const Contactanos = () => {
 
   return (
     <>
-      <div className="relative z-30  w-full h-screen ">
+      <div className="relative w-full h-screen z-[-10]">
         <div className="inset-0 flex justify-center items-start z-20">
           <div className="w-[70%] h-[200px] mt-5 flex flex-col justify-center items-center rounded-[32px] bg-lion-blue">
             <h1 className="font-helvetic-bold text-4xl text-center uppercase text-lion-yellow">

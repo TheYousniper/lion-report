@@ -92,32 +92,38 @@ const Colabora = () => {
   return (
     <>
       <div className="w-full flex justify-center items-start">
-        <div className="w-[70%] h-[200px] mt-5 flex flex-col justify-center items-center rounded-[32px] bg-lion-blue">
-          <h1 className="font-helvetic-bold text-8xl text-lion-yellow">
+        <div className="w-[90%] h-[100px] lg:w-[70%] lg:h-[200px] mt-5 flex flex-col justify-center items-center rounded-[32px] bg-lion-blue">
+          <h1 className="font-helvetic-bold text-2xl lg:text-8xl text-lion-yellow">
             ¡AYUDANOS A SERVIR!
           </h1>
-          <p className="font-helvetic-regular text-lion-yellow text-2xl pt-5">
+          <p className="font-helvetic-regular text-lion-yellow lg:text-2xl text-lg text-center px-2 lg:pt-5">
             ¡Te presentamos nuestra tienda de ropa y nuestro botón de donación!
           </p>
         </div>
       </div>
       <div className="w-full bg-white flex flex-wrap justify-center">
-  {
-    items.map((item, index) => (
-      <div key={index} className="w-[20%] flex flex-col justify-center items-center m-2 p-2 bg-white rounded-[32px] shadow-lg">
-        <div className="w-full h-[300px] flex justify-center items-center rounded-[32px]">
-          <img src={item.img} alt={item.item} className="w-[200px]" />
-        </div>
-        <div className="w-full flex flex-col justify-center items-center mt-2">
-          <h1 className="font-helvetic-bold text-2xl text-lion-yellow text-center">{item.item}</h1>
-          <p className="font-helvetic-regular text-lion-yellow text-xl text-center">Precio: ${item.price}</p>
-          <button className="w-[150px] h-[40px] mt-2 bg-lion-yellow rounded-[32px] font-helvetic-bold text-lion-blue text-xl">Comprar</button>
-        </div>
+        {items.map((item, index) => (
+          <div
+            key={index}
+            className="lg:w-[20%] w-[45%]  flex flex-col justify-center items-center m-2 p-2 bg-white rounded-[32px] shadow-lg"
+          >
+            <div className="lg:w-full lg:h-[300px] flex justify-center items-center rounded-[32px]">
+              <img src={item.img} alt={item.item} className="lg:w-[200px] w-[100px] h-[100px]" />
+            </div>
+            <div className="w-full flex flex-col justify-center items-center mt-2">
+              <h1 className="font-helvetic-bold lg:text-2xl text-lion-yellow text-center">
+                {item.item}
+              </h1>
+              <p className="font-helvetic-regular text-lion-yellow lg:text-xl text-center">
+                Precio: ${item.price}
+              </p>
+              <button className="lg:w-[150px] lg:h-[40px] w-[95%] my-2  bg-lion-yellow rounded-[32px] font-helvetic-bold text-lion-blue lg:text-xl">
+                Comprar
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
-    ))
-  }
-</div>
-
     </>
   );
 };

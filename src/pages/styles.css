@@ -5,14 +5,14 @@ body {
   height: 100%;
 }
 
-body {
+body {  
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000;
   margin: 0;
   padding: 0;
 }
-
+/* Estilos generales para Swiper */
 .swiper {
   width: 100%;
   padding-top: 50px;
@@ -38,8 +38,76 @@ body {
   height: 14px;
   transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
 }
+
 .swiper-pagination-bullet-active {
   background-color: #EBB700; /* Cambia el color de la bolita activa */
   width: 16px;
   height: 16px;
+  margin-top: 10px; /* Ajusta la posición vertical */
+}
+
+/* Media Queries para ajustar el Swiper en pantallas más pequeñas */
+
+/* Pantallas de tamaño mediano */
+@media (max-width: 1024px) {
+  .swiper-slide {
+    width: 300px;
+    height: 450px;
+  }
+
+  .swiper {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .swiper-pagination-bullet {
+    margin-top: 8px; /* Ajusta la posición vertical para pantallas medianas */
+  }
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 768px) {
+  .swiper-slide {
+    width: 250px;
+    height: 350px;
+  }
+
+  .swiper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    margin-top: 6px; /* Ajusta la posición vertical para pantallas pequeñas */
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* Pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .swiper-slide {
+    width: 200px;
+    height: 300px;
+  }
+
+  .swiper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 12px;
+    height: 12px;
+  }
 }
