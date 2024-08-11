@@ -23,23 +23,20 @@ const Contactanos = () => {
 
   return (
     <>
-      <div className="relative w-full h-screen z-[-10]">
+      <div className="relative w-full h-screen">
         <div className="inset-0 flex justify-center items-start z-20">
-          <div className="w-[70%] h-[200px] mt-5 flex flex-col justify-center items-center rounded-[32px] bg-lion-blue">
-            <h1 className="font-helvetic-bold text-4xl text-center uppercase text-lion-yellow">
+          <div className="lg:w-[70%] lg:h-[200px] w-[95%] mt-5 flex flex-col justify-center items-center rounded-[32px] bg-lion-blue">
+            <h1 className="font-helvetic-bold lg:text-4xl text-base p-3 text-center uppercase text-lion-yellow">
               Si tienes algo que reportar o alguna idea que nos pueda ayudar a reducir o mitigar la pobreza en el Perú, no dudes en contactarnos.
             </h1>
           </div>
         </div>
-        <div className="max-w-lg mx-auto my-7 p-6 bg-white rounded-lg shadow-lg">
-          <h2 className="text-4xl uppercase bg-lion-blue w-[80%] rounded-xl mx-auto p-2 font-helvetic-bold mb-6 text-center text-lion-yellow ">
-            Contáctanos
-          </h2>
+        <div className="max-w-lg mx-auto my-7 p-6 bg-lion-blue rounded-lg shadow-lion-yellow">
           <form>
             <div className="mb-4">
               <label
-                for="name"
-                className="block font-medium text-lion-blue font-helvetic-medium uppercase text-xl"
+                htmlFor="name"
+                className="block font-medium text-lion-yellow font-helvetic-medium uppercase text-xl"
               >
                 Nombre
               </label>
@@ -52,8 +49,8 @@ const Contactanos = () => {
             </div>
             <div className="mb-4">
               <label
-                for="email"
-                className="block font-medium text-lion-blue font-helvetic-medium uppercase text-xl"
+                htmlFor="email"
+                className="block font-medium text-lion-yellow font-helvetic-medium uppercase text-xl"
               >
                 Correo Electrónico
               </label>
@@ -66,8 +63,8 @@ const Contactanos = () => {
             </div>
             <div className="mb-4">
               <label
-                for="message"
-                className="block font-medium text-lion-blue font-helvetic-medium uppercase text-xl"
+                htmlFor="message"
+                className="block font-medium text-lion-yellow font-helvetic-medium uppercase text-xl"
               >
                 Mensaje
               </label>
@@ -81,7 +78,7 @@ const Contactanos = () => {
             <div className="text-center">
               <button
                 type="submit"
-                className="px-6 py-2 bg-lion-blue text-lion-yellow font-helvetic-medium text-xl rounded-md shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="px-6 py-2 bg-lion-yellow text-lion-blue font-helvetic-medium text-xl rounded-md shadow   focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
                 Enviar
               </button>
