@@ -60,13 +60,12 @@ const Home = () => {
         <div className="w-[80%] h-full mt-5 lg:flex lg:flex-row flex flex-col">
           <div className="w-full lg:p-10">
             <h2 className="text-justify text-xl lg:text-3xl font-helvetic-medium">
-              Somos una organización no gubernamental (ONG) dedicada a abordar
-              problemas globales que afectan a las comunidades más vulnerables.
+            El Clubes de Leones es una organización mundial de servicio con más de 46.000 clubes y 1,5 millones de miembros activos distribuidos en 206 países y áreas geográficas.
             </h2>
             <p className="text-justify font-helvetic-light lg:text-xl text-base mt-5">
               Nuestra misión es trabajar incansablemente para promover el
               desarrollo sostenible, la justicia social y la equidad en todo el
-              mundo. En esta página, nos enfocaremos específicamente en la lucha
+              mundo, asi como satisfacer las necesidades de la comunidad tanto a nivel global como local. En esta página, nos enfocaremos específicamente en la lucha
               contra la pobreza en el Perú, un desafío que afecta a millones de
               personas y limita su acceso a una vida digna.
             </p>
@@ -81,7 +80,7 @@ const Home = () => {
               potencial.
             </p>
             <h3 className="text-start lg:text-2xl text-xl font-helvetic-medium mt-5">
-              Como ONG, estamos comprometidos a trabajar de manera integral para
+              Como Club, estamos comprometidos a trabajar de manera integral para
               combatir la pobreza en el Perú.
             </h3>
             <p className="text-justify font-helvetic-light lg:text-xl text-base">

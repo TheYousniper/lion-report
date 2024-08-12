@@ -108,7 +108,7 @@ const Colabora = () => {
             className="lg:w-[20%] w-[45%]  flex flex-col justify-center items-center m-2 p-2 bg-white rounded-[32px] shadow-lg"
           >
             <div className="lg:w-full lg:h-[300px] flex justify-center items-center rounded-[32px]">
-              <img src={item.img} alt={item.item} className="lg:w-[200px] w-[100px] h-[100px]" />
+              <img src={item.img} alt={item.item} className="lg:w-[300px] lg:h-[300px] w-[100px] h-[100px]" />
             </div>
             <div className="w-full flex flex-col justify-center items-center mt-2">
               <h1 className="font-helvetic-bold lg:text-2xl text-lion-yellow text-center">
